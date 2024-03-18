@@ -22,9 +22,7 @@
     <label class="labelPassword" for="password">Password:</label>
     <input  class="password" type="password" id="password" name="password" placeholder="Password" required>
 
-    <label class="labelShowPassword" for="showPassword">Show Password:</label>
-    <input class="showPassword" type="checkbox"  id="showPassword" onclick="togglePasswordVisibility()">
-    
+   
     <label class="labelEmail" for="email">Email:</label>
     <input class="Email" type="email" id="email" name="email" placeholder="Example@gmail.com" required>
 
@@ -81,7 +79,31 @@ body, html {
 }
 
 </style>
+<script>
+    function validate()
+    {
+        var username = document.getElementById("name").value
+        var password = document.getElementById("password").value
 
+        switch(username)
+        {
+            case "HUMSSB":
+                switch(password)
+                {
+                    case "11HB04":
+                        return true
+                    default:
+                        alert("Incorrect Password")
+                        return false
+                }
+            break;
+            default:
+                alert("No User found!")
+                return false
+        }
+    }
+    </script>
+    
 
 </body>
 </html>
