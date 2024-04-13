@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+</head>
+<body>
+    <p1  class="center"
+    ><i>Now that I know we share the same feelings, feel free to watch my heart beat for you.</i></p1> 
+   
+    <div class="heart">
+  <div class="heartbeat">♥️</div>
+  <div class="heartecho">♥️</div>
+</div>
+
+<style>
+     .center {
+  display: block;
+  margin-left: ;
+  margin-right:;
+  height: 53%;
+  width: 40%;
+}
+    
+    
+    body {
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height: 100vh;
+}
+
+.heart {
+  font-size: 8em;
+  position: relative;
+}
+
+.heartbeat {
+  position: relative;
+  z-index: 1;
+  animation: beat 2s linear infinite;
+}
+
+.heartecho {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: echo 2s linear infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(0.9);
+  }
+  21% {
+    transform: scale(1.1) skew(0.004turn)
+  }
+  28% {
+    transform: scale(1) skew(0.008turn);
+  }
+  35% {
+    transform: scale(1) skew(0)
+  }
+   
+    }
+    
+    @keyframes echo {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  14% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  21% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+    
+    
+    
+    
+</style>
+
+
+</body>
+</html>
