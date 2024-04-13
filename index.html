@@ -2,94 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confession</title>
+    <title>Log in</title>
 </head>
+<body>
+    <div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
 
-<body style="background-color:pink;">
+<div style="color:White" class="bg-form"><form id="myForm"onsubmit="return validate()" action="home.html">
+
+    <img src="1710198839605.png" alt="LOGO" class="logo">
+    <h3>Study Space Online</h3>
+
+    <label class="labelName" for="name">Name:</label>
+    <input class="Name" type="text" id="name" name="name" placeholder="Name" required>
+    <label class="labelPassword" for="password">Password:</label>
+    <input  class="password" type="password" id="password" name="password" placeholder="Password" required>
+   <label class="labelDate" for="date">Date:</label>
+    <input class="Date" type="date" id="date" name="date" required> 
+   <input type="submit" value="Submit" style="color:black">
+</form></div>
+
+    <div id="player">
+    <audio controls autoplay hidden>
+     <source src="Persona 3 OST Velvet Room.m4a" type="audio/m4a">
+                
+    </audio>
+    </div>
     
     
+    
+    
+    
+    
+    
+    <style>
 
-<img src="content://com.android.externalstorage.documents/tree/primary%3ASamples/document/primary%3ASamples%2Fgiphy.gif" class="center" alt="dot">
-
-
-
-<p style="text-align:center;">Do you like me too?</p> 
-
- 
-    <div style="color:White; text-align:center;" class="bg-form"><form id="myForm"onsubmit="return validate()" action="homi.html">
-        
-        
-      
-    <label class="labelPassword"" for="password">Yes or No</label>
-    <input  class="password" type="password" id="password" name="password" placeholder="" required>
-        
-        
-        
-        
-        
-        <input  type="submit" value="Submit" style="color:black;">
-        
-        
-        
-   </form>
-  <style>
-      
-       .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 30%;
-  width: 50%;
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-      .bg-form {
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("1710086940287.jpg"); }
+.img2 { background-image: url("1710086940287.jpg"); }
+.img3 { background-image: url("1710086940287.jpg"); }
+.img4 { background-image: url("1710086940287.jpg"); }
+.img5 { background-image: url("1710086940287.jpg"); }
+.img6 { background-image: url("IMG_20240311_000921_246_copyimages (23).jpeg"); }
+
+/* Position text in the middle of the page/image */
+.bg-form {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.0); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: transparent;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 45px;
   border: 10px solid transparent;
   position: fixed; /* Stay fixed */
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: absolute;
+  width: 500px;
   padding: 20px;
   text-align: center;
 }
 
-      
-      
-      
-      
-  </style>
-        
-        
-        <script >
-            
-               function validate()
+</style>
+<script>
+    function validate()
     {
-        
+        var username = document.getElementById("name").value
         var password = document.getElementById("password").value
 
-     
+        switch(username)
+        {
+            case "HUMSSB":
                 switch(password)
                 {
-                    case "Yes":
+                    case "11HB04":
                         return true
                     default:
-                        alert("Try again😜")
+                        alert("Incorrect Password")
                         return false
                 }
-            
-         
-               
-            }
-     </script>
-        
+            break;
+            default:
+                alert("No User found!")
+                return false
+        }
+    }
+    </script>
     
-
 
 </body>
 </html>
