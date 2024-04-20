@@ -1,43 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Log in</title>
-</head>
-<body>
-    <div class="bg-image img1"></div>
-<div class="bg-image img2"></div>
-<div class="bg-image img3"></div>
-<div class="bg-image img4"></div>
-<div class="bg-image img5"></div>
-<div class="bg-image img6"></div>
-
-<div style="color:White" class="bg-form"><form id="myForm"onsubmit="return validate()" action="home.html">
-
-    <img src="1710198839605.png" alt="LOGO" class="logo">
-    <h3>Penemue</h3>
-
-    <label class="labelName" for="name">Name:</label>
-    <input class="Name" type="text" id="name" name="name" placeholder="Name" required>
-    <label class="labelPassword" for="password">Password:</label>
-    <input  class="password" type="password" id="password" name="password" placeholder="Password" required>
-   <label class="labelDate" for="date">Date:</label>
-    <input class="Date" type="date" id="date" name="date" required> 
-   <input type="submit" value="Submit" style="color:black">
-</form></div>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    <style>
-
+<meta charset="UTF-8">
+<title>Log in</title>
+<style>
 body, html {
-  height: 100%;
+  height: 100%; /* Set height to 100% */
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -48,7 +16,7 @@ body, html {
 
 .bg-image {
   /* Full height */
-  height: 50%;
+  height: 100%; /* Set height to 100% */
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -81,33 +49,53 @@ body, html {
   padding: 20px;
   text-align: center;
 }
-
 </style>
-<script>
-    function validate()
-    {
-        var username = document.getElementById("name").value
-        var password = document.getElementById("password").value
+</head>
+<body>
 
-        switch(username)
-        {
-            case "HUMSSB":
-                switch(password)
-                {
-                    case "11HB04":
-                        return true
-                    default:
-                        alert("Incorrect Password")
-                        return false
-                }
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<div style="color:White" class="bg-form">
+    <form id="myForm" onsubmit="return validate()" action="home.html">
+        <img src="1710198839605.png" alt="LOGO" class="logo">
+        <h3>Penemue</h3>
+
+        <label class="labelName" for="name">Name:</label>
+        <input class="Name" type="text" id="name" name="name" placeholder="Name" required>
+        <label class="labelPassword" for="password">Password:</label>
+        <input  class="password" type="password" id="password" name="password" placeholder="Password" required>
+        <label class="labelDate" for="date">Date:</label>
+        <input class="Date" type="date" id="date" name="date" required> 
+        <input type="submit" value="Submit" style="color:black">
+    </form>
+</div>
+
+<script>
+function validate() {
+    var username = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+
+    switch (username) {
+        case "HUMSSB":
+            switch (password) {
+                case "11HB04":
+                    return true;
+                default:
+                    alert("Incorrect Password");
+                    return false;
+            }
             break;
-            default:
-                alert("No User found!")
-                return false
-        }
+        default:
+            alert("No User found!");
+            return false;
     }
-    </script>
-    
+}
+</script>
 
 </body>
 </html>
