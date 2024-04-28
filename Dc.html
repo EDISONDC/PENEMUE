@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dc gpt</title>
+  <title>Nera AI</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -112,8 +112,18 @@
       botResponse = 'I am just a chatbot, but thank you for asking!';
     } else if (message.includes('time')) {
       botResponse = new Date().toLocaleTimeString();
+    } else if (message.includes('tell me a joke')) {
+      botResponse = 'Why don\'t skeletons fight each other? They don\'t have the guts.';
+    } else if (message.includes('tell me something interesting')) {
+      botResponse = 'Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.';
+    } else if (message.includes('thank you')) {
+      botResponse = 'You\'re welcome!';
+    } else if (message.includes('what can you do')) {
+      botResponse = 'I can provide information, tell jokes, make sentences, and much more. Just ask!';
+    } else if (message.includes('bye') || message.includes('goodbye')) {
+      botResponse = 'Goodbye! Have a great day!';
     } else {
-      botResponse = "I am still learning. Please ask me something else.";
+      botResponse = "I'm sorry, I didn't understand that. Please ask me something else.";
     }
     setTimeout(function() {
       appendMessage('bot', botResponse);
