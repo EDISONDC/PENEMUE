@@ -125,6 +125,16 @@
     } else {
       botResponse = "I'm sorry, I didn't understand that. Please ask me something else.";
     }
+if (message.includes('hi') || message.includes('hello')) {
+    const greetings = ['Hello!', 'Hi there!', 'Hey!', 'Hi, how can I assist you?', 'Greetings!'];
+    botResponse = greetings[Math.floor(Math.random() * greetings.length)];
+}
+
+
+
+
+
+
     setTimeout(function() {
       appendMessage('bot', botResponse);
     }, 500);
