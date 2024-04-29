@@ -124,7 +124,9 @@
       botResponse = 'Goodbye! Have a great day!';
     } else {
       botResponse = "I'm sorry, I didn't understand that. Please ask me something else.";
-    }
+    } if (message.includes("tell me danica's joke")) {
+  botResponse = "Anong tawag sa gulay na smoker? edi sigarilyas";
+}  
 if (message.includes('hi') || message.includes('hello')) {
     const greetings = ['Hello!', 'Hi there!', 'Hey!', 'Hi, how can I assist you?', 'Greetings!'];
     botResponse = greetings[Math.floor(Math.random() * greetings.length)];
