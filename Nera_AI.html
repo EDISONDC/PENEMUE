@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nera AI</title>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -161,10 +161,6 @@
     input[type="text"]::-moz-placeholder {
       color: #999;
     }
-    
-    
-    
-  
   </style>
 </head>
 <body>
@@ -235,16 +231,24 @@
       botResponse = 'I can provide information, tell jokes, make sentences, and much more. Just ask!';
     } else if (message.includes('bye') || message.includes('goodbye')) {
       botResponse = 'Goodbye! Have a great day!';
+    } else if (message.includes("tell me danica's joke")) {
+      botResponse = "Anong tawag sa gulay na smoker? edi sigarilyas";
+    } else if (message.includes('hi') || message.includes('hello')) {
+      const greetings = ['Hello!', 'Hi there!', 'Hey!', 'Hi, how can I assist you?', 'Greetings!'];
+      botResponse = greetings[Math.floor(Math.random() * greetings.length)];
+    } else if (message.includes('tell me a fact about AI')) {
+      botResponse = 'An interesting fact about AI is that the term "artificial intelligence" was coined in 1956 at the Dartmouth Conference.';
+    } else if (message.includes('what is AI')) {
+      botResponse = 'AI stands for "artificial intelligence," which refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.';
+    } else if (message.includes('define machine learning')) {
+      botResponse = 'Machine learning is a subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.';
+    } else if (message.includes('what is natural language processing')) {
+      botResponse = 'Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language.';
+    } else if (message.includes('what is a chatbot')) {
+      botResponse = 'A chatbot is a computer program designed to simulate conversation with human users, especially over the internet.';
     } else {
       botResponse = "I'm sorry, I didn't understand that. Please ask me something else.";
-    } if (message.includes("tell me danica's joke")) {
-  botResponse = "Anong tawag sa gulay na smoker? edi sigarilyas";
-}  if (message.includes('hi') || message.includes('hello')) {
-    const greetings = ['Hello!', 'Hi there!', 'Hey!', 'Hi, how can I assist you?', 'Greetings!'];
-    botResponse = greetings[Math.floor(Math.random() * greetings.length)];
-}
-
-
+    }
     setTimeout(function() {
       appendMessage('bot', botResponse);
     }, 500);
@@ -262,11 +266,9 @@
     const subjects = ['I', 'You', 'He', 'She', 'It', 'We', 'They'];
     const verbs = ['am', 'is', 'are', 'do', 'does', 'did', 'have', 'has', 'had', 'can', 'could', 'will', 'would', 'shall', 'should', 'may', 'might', 'must'];
     const objects = ['a chatbot', 'a programmer', 'a teacher', 'a student', 'an engineer', 'a doctor', 'a scientist', 'a writer', 'an artist'];
-    
     const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
     const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
     const randomObject = objects[Math.floor(Math.random() * objects.length)];
-
     return `${randomSubject} ${randomVerb} ${randomObject}.`;
   }
 
@@ -279,8 +281,5 @@
     }
   }
 </script>
-
-
-
 </body>
 </html>
