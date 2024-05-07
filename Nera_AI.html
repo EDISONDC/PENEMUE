@@ -249,7 +249,18 @@
     } else {
       botResponse = "I'm sorry, I didn't understand that. Please ask me something else.";
     }
-    setTimeout(function() {
+ 
+if (message.includes('what is ict?')) {
+      botResponse = 'Information and Communication Technologies (ICTs) is a broader term for Information Technology (IT), which refers to all communication technologies, including the internet, wireless networks, cell phones, computers, software, middleware, video-conferencing, social networking, and other media applications and services.'; }
+
+
+
+
+
+
+
+
+   setTimeout(function() {
       appendMessage('bot', botResponse);
     }, 500);
   }
