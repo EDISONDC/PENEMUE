@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For you my dear😘</title>
+    
+      
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+  
+    <div class="textCont"></div>
+    <div class="song">
+      <div class="title">Tap me</div>
+      <div class="pause" onclick="togglePlay()">🔈</div>
+      <div class="player">
+        <audio
+          class="audio"
+          src="content://com.android.externalstorage.documents/tree/primary%3ADownload%2Fcom.yy.musicfm.global/document/primary%3ADownload%2Fcom.yy.musicfm.global%2FBINI%20-%20Salamin%2C%20Salamin.m4a "
+         autoplay
+         
+          type="audio"
+          loop=""
+        ></audio>
+      </div>
+    </div>
+    <footer>
+      <a
+
+      >
+    </footer>
+    <script src="letter.js"></script>
+    <script>
+      var pause = document.querySelector(".pause");
+      var audio = document.querySelector(".audio");
+
+      function togglePlay() {
+        if (audio.paused) {
+          audio.play();
+          pause.innerHTML = "🔈";
+        } else {
+          audio.pause();
+          pause.innerHTML = "🔊";
+          pause.style.color = " #848484";
+        }
+      }
+    </script>
+    <script src="letter.js"></script>
+  </body>
+</html>
