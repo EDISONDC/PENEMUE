@@ -8,7 +8,7 @@ function choose(option) {
 
     if (option === "help") {
         storyText.innerHTML = "You decide to help Chloe. She leads you to her mother, who is gravely ill. Penemue tells her about Eribus, the dragon who controls life and death.";
-        sceneImage.src = "11_20250322_005058_0003.jpg"; 
+        sceneImage.src = "10_20250322_005058_0002.jpg"; 
 
         setTimeout(() => {
             storyText.innerHTML = "Do you go to Mount Herdia to confront Eribus or search for another way?";
